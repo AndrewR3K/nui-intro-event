@@ -1,0 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    min-height: 10vh;
+    width: 100vh;
+    background-color: rgb(34, 34, 34);
+    margin: 0 auto;
+    border-radius: 8px;
+
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+}
+
+#copy {
+    width: 100%;
+    color: white;
+    text-align: center;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.changebutton {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: lightgrey;
+}
+
+.difchangebutton {
+  background-color: blue;
+}
+
+.slide-enter-active, .slide-leave-active {
+  animation: slide 0.4s ease;
+}
+.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  animation: slide  0.4s ease reverse;
+}
+
+@keyframes slide {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0px;
+  }
+}

@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app">
+      <transition name="slide">
+        <div id="wrap" v-if="showing">
+          <!-- <div id="copy" ref="cstyle"> -->
+          <div id="copy" :style="changestyle">
+            {{message}}
+
+            <input v-model="tempmessage" />
+            <button
+              class="changebutton"
+              :class="buttonstyle"
+              @keypress.enter="changeMessage()"
+              @click="changeMessage()"
+            >
+              Change Message
+            </button>
+            <div class="changebutton" @click="showing = false">Close</div>
+          </div>
+        </div>
+      </transition>
     </div>
   </body>
-  <footer></footer>
 </html>
 
 <!-- Import your JS app and JS Vendor (vue.js) -->
